@@ -1,0 +1,37 @@
+<style type="text/css">
+	.MenuButton {
+		border-bottom:17px double black;
+		border-top:6px solid black;
+		height:5px;
+		width:30px;
+	}
+	.title_header {
+		height:100%;
+		font-size:20pt;
+		font-weight:900;
+		color:rgba(0,0,0,0.8);
+		text-shadow:0px 1px 2px #FFF,0 0 0 #000,0px 1px 2px #FFF;
+		box-sizing:border-box;
+	}
+	.MainHeader {
+		background:#FFF; /* Old browsers */
+		height:100%;
+		box-sizing:border-box;
+		position:relative;
+	}
+	.title_header> div {
+		height:80%;
+	}
+</style>
+
+<div class="MainHeader" >
+
+	<div class="centerdivabs vbox title_header goodFont">
+		<div>
+			<img style="height:100%" src="resources/img/LUI4_800.svg" >
+			LUI
+		</div>
+
+	</div>
+	<img src="resources/img/menu.svg" style="float:right" height="100%" ng-click="Tmp.showSMenu=true">
+</div>

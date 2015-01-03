@@ -1,0 +1,8 @@
+{
+  "name": "agap_hall",
+  "lights": [
+    "TV1","TV2","TV3","TV4",
+    "house"
+  ]
+}
+

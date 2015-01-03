@@ -1,0 +1,20 @@
+<div ng-controller="DashCtrl" id="DashCtrl" style="width:100%;height:100%">
+
+	<div class="slideMenu goodFont" ng-include="addver('pages/menu.html')"></div>
+
+	<div class="mainUI"
+	ng-class="Tmp.showSMenu? 'makeRoom4SlideMenu':' ' "
+	style="width:100%;height: 100%; position:relative;background: #DDD;"
+	>
+		<div style="position:absolute;width:100%;height: 100%;left:0;background:#000; opacity: 0.7;z-index:1000;"
+		ng-style="Tmp.showSMenu?'':{'display':'none'}" ng-click="Tmp.showSMenu=!Tmp.showSMenu"></div>
+		<div class="header"
+
+		ng-include="addver('pages/header.html')"></div>
+		<div resize class="body borderbox " ng-include ="addver('pages/dash/body.html')" style="word-wrap: break-word;
+		"></div>
+
+		<div class="footer"  ng-include ="addver('pages/footer.html')"></div>
+
+	</div>
+</div>

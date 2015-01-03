@@ -1,0 +1,27 @@
+
+.mainUI {
+	transition: transform 0.25s;
+}
+
+
+
+.slideMenu li
+{
+  padding:20px;
+  background-color:#F5F5F5;
+  border-bottom:1px solid #131313;
+  list-style:none;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-transition:all 0.2s ease-in-out;
+}
+.slideMenu li:hover
+{
+ background-color:#131313;
+ color:white;
+ text-align:center;
+}
+.slideMenu>a
+{
+  text-decoration:none;
+  color:black;
+}

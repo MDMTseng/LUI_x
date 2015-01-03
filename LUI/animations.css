@@ -1,0 +1,115 @@
+.slide-animate-container {
+	position: relative;
+	height:  100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.slide-animate {
+	 transition:transform  cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: block;
+	opacity: 1;
+	z-index: 10;
+	transform: scale(1);
+}
+.ng-leave *,.ng-enter *{
+	animation-play-state: paused !important;
+}
+.slide-animate.ng-leave.LOGOout_F {
+}
+
+.slide-animate.ng-leave.ng-leave-active.Fade_F {
+
+	/* transition:opacity  cubic-bezier(0.250, 0.460, 0.450, 0.940) 100s;opacity: 0;*/
+	animation: Fade_F 1s ;
+	
+	animation-fill-mode: forwards;
+	animation-delay: 1s; 
+	/*transform: translate(0,180px);*/
+}
+@keyframes Fade_F {
+0% {opacity: 1;}
+100% {	opacity: 0;}
+}
+.slide-animate.ng-leave.ng-leave-active.LOGOout_F {
+
+	animation: LOGOout_F 2s ;
+	
+	animation-fill-mode: forwards;
+	/*transform: translate(0,180px);*/
+}
+@keyframes LOGOout_F {
+0% {}
+40% {opacity: 1;
+	transform: translate(0,0);}
+80% {	opacity: 0;
+	transform: translate(0,180px); }
+100% {	opacity: 0;
+	transform: translate(0,180px); }
+}
+
+
+.slide-animate.ng-enter.cardStack_B {
+	/*top:-100%;*/
+	/*opacity: 0.4;
+	/*transform: scale(0.8);*/
+}
+
+.slide-animate.ng-enter.cardStack_F {
+	/*top:-100%;*/
+	transform: translate(100%, 0px);
+	opacity: 1;
+}
+
+.slide-animate.ng-enter.slide_L {
+	/*top:-100%;*/
+	transform: translate(100%, 0px);
+	opacity: 1;
+}
+.slide-animate.ng-enter.slide_R {
+	/*top:-100%;*/
+	transform: translate(-100%, 0px);
+	opacity: 1;
+}
+
+.slide-animate.ng-enter.ng-enter-active {
+	/*top:0;*/
+	transform: translate(0, 00px);
+	transform: scale(1);
+	opacity: 1;
+}
+
+.slide-animate.ng-leave {
+	/*top:0;*/
+	transform: translate(0%, 000px);
+	opacity: 1;
+}
+.slide-animate.ng-leave.ng-leave-active.slide_L {
+	transform: translate(-100%, 0px);
+	opacity: 1;
+}
+.slide-animate.ng-leave.ng-leave-active.slide_R {
+	 transform: translate(100%, 0px) ;
+	opacity: 1;
+
+}
+.slide-animate.ng-leave.ng-leave-active.cardStack_B {
+	transform: translate(120%, 0px);
+	opacity: 1;
+	/*box-shadow: -30px -00px 00px #000;*/
+	/* //top:100%;*/
+}
+.slide-animate.ng-leave.ng-leave-active.cardStack_F {
+	
+	z-index: 1;
+	/*transform: scale(0.8);
+	opacity: 0.4;
+	/* opacity: 0.4;
+	 * top:100%;*/
+}
+

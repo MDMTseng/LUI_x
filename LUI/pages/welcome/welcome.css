@@ -1,0 +1,125 @@
+.LOGO {
+	min-width: 200px;
+	max-width: 400px;
+	width: 200px;
+	height: auto;
+}
+.LOGOanimate {
+	animation: shiftUp 2s ease-out, blinker 3s 2s infinite ease-in-out;
+	animation-fill-mode: forwards;
+}
+@keyframes shiftUp {0% { transform:translateY(60px); }100% {transform:translateY(0px);  }}
+
+.Titleanimate {
+	transform: translateX(20px);
+	animation: shiftL2C 1s ease-out;
+	animation-fill-mode: forwards;
+}
+
+@keyframes shiftL2C {
+0% { transform:translateX(20px); }
+100% {transform:translateX(0px);  }
+}
+.Title {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	font-size: 50px;
+}
+.FadeIn > * {
+	vertical-align: bottom;
+}
+.FadeIn {
+	opacity: 0.0;
+	animation-delay: 2s; /* Safari and Chrome */
+	animation: fadein 1s;
+	animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+}
+@keyframes fadein {
+0% {opacity: 0.0; }
+100% { opacity: 1.0;}
+}
+
+div#loadingAnimation {
+	width: 100px;
+}
+
+.loadingAnimation {
+	display: inline-block;
+	position: relative;
+	color: black;
+	font: 19px Monospace;
+	animation: blinker 3s infinite;
+}
+@keyframes blinker {
+0% { opacity: 1.0; }
+50% { opacity: 0.8; }
+100% { opacity: 1.0; }
+}
+.path {
+	stroke-dasharray: 1000;
+}
+
+.aDelay1 {
+	animation-delay: 1s; /* Safari and Chrome */
+	animation-delay: 1s;
+}
+.aDelay2 {
+	animation-delay: 2s; /* Safari and Chrome */
+	animation-delay: 2s;
+}
+.aDelay3 {
+	animation-delay: 3s; /* Safari and Chrome */
+	animation-delay: 3s;
+}
+.aDelay5 {
+	animation-delay: 5s; /* Safari and Chrome */
+	animation-delay: 5s;
+}
+.aDelay6 {
+	animation-delay: 6s; /* Safari and Chrome */
+	animation-delay: 6s;
+}
+.aDelay7 {
+	animation-delay: 7s; /* Safari and Chrome */
+	animation-delay: 7s;
+}
+.SmallTitle {
+	font-size: 20px;
+	top: 10px;
+	transform: translateY(10px);
+}
+.setH30 {
+	height: 30px;
+	font-size: 10pt;
+}
+.setH30 > * {
+	margin:0;
+	min-width:0 ;
+	max-width:none ;
+	animation: none;
+}
+.setH30 > div {
+	width: 1px;
+}
+.setH30 > input{
+	font-size: 10pt;
+	color: #000;
+	width: 150px;
+	box-shadow: 0px 0px 3px 1px rgba(100,100,100,0.8);
+}
+.setH30 > button {
+	transition:all 0.2s;
+	font-size: 20pt;
+	color: #FFF;
+	text-align: center;
+	background: #000;
+	animation: none;
+	box-shadow: 0px 0px 9px 1px rgba(100,100,100,0.8);
+}
+
+.setH30 > button:active {
+	background: #FFF;
+	color: #000;
+	animation: none;
+	box-shadow: 0px 0px 2px 1px rgba(100,100,100,0.8);
+}

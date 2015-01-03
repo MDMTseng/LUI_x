@@ -1,0 +1,34 @@
+<style type="text/css">
+	.MenuButton {
+		border-bottom: 17px double black;
+		border-top: 6px solid black;
+		height: 5px;
+		width: 30px;
+	}
+	.title_header{
+		position: absolute;
+		left:50%;
+		transform:transition(-50%,0);
+		
+		height:100%;
+	}
+</style>
+
+<div style="width:100%;height: 100%; padding:5px;box-sizing: border-box;">
+	<div class="vbox " style="background: #FFF;width:100%;height: 100%;box-shadow: 2px 2px 4px #000;
+	">
+
+		<div class="MenuButton" ng-click="Tmp.showSMenu=!Tmp.showSMenu"
+		ng-init="Tmp.showSMenu=false;"></div>
+
+		<button ng-click="toggleFScr()">
+			Full screen?{{Tmp.isfullScreen}}
+		</button>
+		
+		<div class="vbox title_header">
+			<img style="height:100%;" src="resources/img/LOGO800.svg" >
+			sdsdsd
+		</div>
+	</div>
+
+</div>

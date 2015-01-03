@@ -1,0 +1,66 @@
+<style>
+	.switch_Prot {
+	}
+	.body {
+		background:#222;
+		overflow:auto;
+	}
+	.blockS.indic.fred {
+		background:#F00;
+		box-shadow:0px 0px 10px 2px rgba(100,0,0,0.8) inset;
+	}
+	.blockS.indic.fgreen {
+		background:#0F0;
+		box-shadow:0px 0px 10px 2px rgba(0,100,0,0.8) inset;
+	}
+	.blockS.indic {
+		background:#666;
+		box-shadow:0px 0px 10px 2px rgba(20,20,20,0.8) inset;
+	}
+</style>
+
+<div class="blockS switchFormatBlk HXF" ng-show="Tmp.pageSel=='holdSwitch'">
+
+	<div class="blockS overlayCon HXF">
+		<div class="blockS overlay "  style="z-index: 1000">
+			<button  class=" blockS  blue width8" ng-click="postHoldState();">
+				Send
+			</button>
+			<button  class=" blockS  red width4" ng-click="initHoldMode();">
+				Neutral
+			</button>
+		</div>
+		<div class="blockS HXF" style="overflow: auto">
+			<div  class=" blockS">
+			</div>
+			<div  class="switch_Prot blockS   HX4" ng-repeat="ele in deviceEle.agap_Prj track by $index" ng-style="Tmp.adaptW">
+				<div class="blockS vbox MSwitch xO height8 width6" ng-class="(Tmp.HoldSwitchStats[$index]==0)?'':'X'"  ng-click="Tmp.HoldSwitchStats[$index]=0;">
+					O
+				</div>
+				<div class="blockS vbox MSwitch xI height8 width6" ng-class="(Tmp.HoldSwitchStats[$index]==1)?'':'X'"  ng-click="Tmp.HoldSwitchStats[$index]=1;">
+					I
+				</div>
+				<div class="blockS   height1 width6 indic"  ng-class="(SwitchStats[$index]==0)?'fred':''"></div>
+				<div class="blockS   height1 width6 indic"   ng-class="(SwitchStats[$index]==0)?'':'fgreen'"></div>
+				<div class="BBar blockS height3" >
+					{{ele.id}}
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="switchFormatBlk" ng-show="Tmp.pageSel=='instantSwitch'"   ng-init="Tmp.pageSel='instantSwitch'">
+	<div  class="switch_Prot blockS   HX4" ng-repeat="ele in deviceEle.agap_Prj track by $index" ng-style="Tmp.adaptW">
+		<div class="blockS vbox MSwitch O height9 width6" ng-class="(SwitchStats[$index]==0)?'':'X'" ng-click="SwitchStats[$index]=0;postSwitchState($index)">
+			O
+		</div>
+		<div class="blockS vbox MSwitch I height9 width6"  ng-class="(SwitchStats[$index]==0)?'X':''" ng-click="SwitchStats[$index]=1;postSwitchState($index)">
+			I
+		</div>
+		<div class="BBar blockS height3" >
+			{{ele.id}}
+		</div>
+	</div>
+</div>

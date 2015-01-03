@@ -1,0 +1,51 @@
+<!--<script type="text/javascript-lazy" src="pages/welcome/welcome.js"></script>-->
+
+<div   style="width:100%;height: 100%;text-align: center;overflow:auto;background: #FFF;
+" ng-controller="WelcomeCtrl">
+
+	<div class="vbox" style="width:100%;height: 100%;">
+		<div>
+
+			<img class="LOGO LOGOanimate" src="resources/img/LOGO800.png" >
+			<br>
+			<!--
+			<span ng-show="InOutUI=='showip'"> {{ServerIP  }} </span>
+
+			<span ng-show="InOutUI==''"> </span>
+			<br>
+			-->
+			<div class="Titleanimate aDelay3">
+				<div class="FadeIn  aDelay2 Title">
+					LUI
+				</div>
+				<div  class="Title SmallTitle FadeIn  aDelay3">
+					&nbsp;web.
+				</div>
+			</div>
+			<br>
+			<div class="progress" ng-class="(State=='UserInputLocalIP')?'setH30':''">
+				<input  ng-model="InputAddress" ng-class="
+				Tmp.prog1==0?'proIng':(Tmp.prog1>0)?'proOK':'proToGo'
+				" >
+				</input>
+				<div ng-class="
+				Tmp.prog1==i?'proIng':(Tmp.prog1>i)?'proOK':'proToGo'
+				" data-ng-repeat="i in [1,2,3]">
+				</div>
+
+				<button ng-class="
+				Tmp.prog1==4?'proIng':(Tmp.prog1>4)?'proOK':'proToGo'
+				" ng-click="inputAddr($event,InputAddress);">
+					GO
+				</button>
+			</div>
+
+			<br>
+			<br>
+
+			{{State+StateInfo}}
+		</div>
+
+	</div>
+
+</div>
